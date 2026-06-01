@@ -5,6 +5,7 @@ import SearchIcon from "./search.svg";
 import "./App.css";
 
 const API_URL = "https://www.omdbapi.com?apikey=b6003d8a";
+const DEFAULT_SEARCH = "Batman";
 
 const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -13,7 +14,7 @@ const App = () => {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    searchMovies("Batman");
+    searchMovies(DEFAULT_SEARCH);
   }, []);
 
   const searchMovies = async (title) => {
