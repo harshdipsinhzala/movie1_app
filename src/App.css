@@ -104,6 +104,31 @@ h1 {
   font-family: var(--font-raleway);
 }
 
+.loading {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #f9d3b4;
+  font-family: var(--font-raleway);
+  font-size: 1.1rem;
+}
+
+.spinner {
+  width: 26px;
+  height: 26px;
+  border: 3px solid rgba(249, 211, 180, 0.25);
+  border-top-color: #f9d3b4;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .container {
   width: 100%;
   margin-top: 3rem;
@@ -225,7 +250,7 @@ h1 {
   }
 
   .movie {
-    width: "100%";
+    width: 100%;
     margin: 1rem;
   }
 }
